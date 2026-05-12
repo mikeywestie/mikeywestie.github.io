@@ -1,24 +1,17 @@
-# Michael Westman Portfolio Website
+# Michael Westman Portfolio Modal Version
 
-Personal portfolio website for Michael Westman.
+Open `index.html` in your browser.
 
-## Live Site
+What changed:
+- The hero `premium-icon-grid` no longer opens external links.
+- Each tech icon opens a neon modal popup.
+- The popup explains what Michael did with that technology.
+- PPS experience was expanded with a right-side icon and greatest accomplishment section.
 
-https://mikeywestie.github.io
+Files:
+- `index.html`
+- `styles.css`
+- `script.js`
 
-## Features
-
-- Neon CV-inspired design
-- Clickable GitHub, LinkedIn, repository, email, and phone links
-- Featured portfolio projects
-- Experience timeline
-- Skills and education sections
-
-## Deployment
-
-Upload `index.html`, `styles.css`, and `README.md` to the root of the `mikeywestie.github.io` repository and enable GitHub Pages from the `main` branch.
-
-
-## Premium version
-
-This version uses inline SVG technology icons for the hero tiles instead of JPG/PNG icon images. This keeps the site lightweight, sharp on all screens, and reliable on GitHub Pages.
+Optional:
+- Add your own `profile.jpg` into this folder to show your profile image.
