@@ -6,10 +6,13 @@ Personal portfolio website for Michael Westman.
 
 https://mikeywestie.github.io
 
-## Files
+## Features
 
-- index.html
-- styles.css
+- Neon CV-inspired design
+- Clickable GitHub, LinkedIn, repository, email, and phone links
+- Featured portfolio projects
+- Experience timeline
+- Skills and education sections
 
 ## Deployment
 
