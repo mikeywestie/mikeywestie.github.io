@@ -8,71 +8,220 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <p class="pill">Full-Stack Java Developer • Spring Boot • React • Enterprise Systems</p>
-      <h1>Michael Westman</h1>
-      <p class="subtitle">
-        I build scalable, secure, production-style applications using Java 21, Spring Boot 3,
-        Kafka, PostgreSQL, Docker, Prometheus, Grafana, and React.
-      </p>
-      <div class="buttons">
-        <a class="btn primary" href="https://github.com/mikeywestie" target="_blank">GitHub</a>
-        <a class="btn secondary" href="https://linkedin.com/in/michael-westman-219178188" target="_blank">LinkedIn</a>
-        <a class="btn secondary" href="mailto:mikeywestman@gmail.com">Email Me</a>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-card portrait-card">
+        <div class="portrait-placeholder">
+          <span>MW</span>
+        </div>
       </div>
-    </div>
-  </header>
 
-  <main class="container">
-    <section>
-      <h2>Featured Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>E-Commerce API</h3>
-          <p>Production-style Spring Boot backend with JWT security, Kafka, PostgreSQL, Flyway, Docker, and observability.</p>
-          <a href="https://github.com/mikeywestie/ecommerce-api" target="_blank">View Repository →</a>
-        </article>
+      <div class="hero-main">
+        <p class="eyebrow">Full-Stack Java Developer</p>
+        <h1><span>Michael</span> Westman</h1>
+        <p class="tagline">Build. Scale. Repeat.</p>
 
-        <article class="card">
-          <h3>Ecommerce Admin UI</h3>
-          <p>React + TypeScript dashboard for managing orders, inventory, payments, and system health.</p>
-          <a href="https://github.com/mikeywestie/ecommerce-admin-ui" target="_blank">View Repository →</a>
-        </article>
-
-        <article class="card">
-          <h3>ARIA Assistant</h3>
-          <p>AI-powered Java assistant concept using JavaFX, speech recognition, and conversational AI.</p>
-          <a href="https://github.com/mikeywestie/AdvancedResponsiveIntelligentAssistant" target="_blank">View Repository →</a>
-        </article>
+        <div class="contact-grid">
+          <span>📍 Sandton AH, Gauteng</span>
+          <span>☎ 062 531 5897</span>
+          <span>✉ michaelwestman43@yahoo.com</span>
+          <span>🔗 linkedin.com/in/michael-westman-219178188</span>
+        </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Technology Stack</h2>
-      <div class="tags">
-        <span>Java 21</span><span>Spring Boot 3</span><span>Kafka</span><span>PostgreSQL</span>
-        <span>Docker</span><span>JWT/OAuth2</span><span>Prometheus</span><span>Grafana</span>
-        <span>React</span><span>TypeScript</span>
+      <div class="hero-card icon-grid">
+        <div>API</div>
+        <div>Microservices</div>
+        <div>Cloud</div>
+        <div>Database</div>
+        <div>Code</div>
+        <div>Systems</div>
       </div>
-    </section>
+    </header>
 
-    <section>
-      <h2>Professional Experience</h2>
-      <div class="grid">
-        <article class="card"><h3>BMW South Africa</h3><p>Worked on modernization initiatives and microservices-oriented architecture.</p></article>
-        <article class="card"><h3>PPS</h3><p>Built secure APIs exposed through API gateways using OAuth2.</p></article>
-        <article class="card"><h3>Stanchion Payment Solutions</h3><p>Developed payment-focused services with Java 21 and Spring Boot 3.</p></article>
-      </div>
-    </section>
-  </main>
+    <main class="layout">
+      <aside class="left-column">
+        <section class="panel">
+          <h2>Profile</h2>
+          <p>
+            Results-driven Full-Stack Java Developer with a strong foundation in analytical problem-solving and system thinking.
+            Transitioned into software development and built extensive experience delivering scalable enterprise solutions.
+          </p>
+          <p>
+            Specialising in Java, Spring Boot, Microservices, and API development with a strong focus on performance, scalability,
+            and clean architecture.
+          </p>
+        </section>
 
-  <footer>
-    © <span id="year"></span> Michael Westman • Build. Scale. Repeat.
-  </footer>
+        <section class="panel">
+          <h2>Skills</h2>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+          <div class="skill">
+            <div class="skill-top"><strong>Backend</strong><span>80%</span></div>
+            <p>Java • C# • Python • Spring Boot • Microservices • Kafka</p>
+            <div class="bar"><span style="width:80%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><strong>Frontend</strong><span>40%</span></div>
+            <p>Angular • React • HTML • CSS • JavaScript</p>
+            <div class="bar"><span style="width:40%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><strong>Databases</strong><span>85%</span></div>
+            <p>PostgreSQL • Oracle • SQL Server • Neo4j • Hibernate</p>
+            <div class="bar"><span style="width:85%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><strong>Tools</strong><span>90%</span></div>
+            <p>Git • Jenkins • Atlassian • Bitbucket</p>
+            <div class="bar"><span style="width:90%"></span></div>
+          </div>
+
+          <div class="skill">
+            <div class="skill-top"><strong>Cloud & AI</strong><span>55%</span></div>
+            <p>AWS • Google Cloud Platform • Azure</p>
+            <div class="bar"><span style="width:55%"></span></div>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Education</h2>
+          <div class="education-item">
+            <h3>Van Zyl & Pritchard</h3>
+            <p>Java Certification</p>
+            <p>Average: 85%</p>
+          </div>
+
+          <div class="education-item">
+            <h3>University of Pretoria</h3>
+            <p>BSc Animal Science (Coursework completed)</p>
+            <p>Developed analytical thinking; transitioned into software development</p>
+          </div>
+
+          <div class="education-item">
+            <h3>Norkem Park High School</h3>
+            <p>Top 10 Academic Achiever</p>
+            <p>Full Academic Colours</p>
+            <p>Chairperson of Academic Committee</p>
+            <p>Prefect</p>
+            <p>Average: 80%</p>
+          </div>
+        </section>
+      </aside>
+
+      <section class="right-column">
+        <section class="panel timeline-panel">
+          <h2>Experience</h2>
+
+          <article class="job green">
+            <div class="job-header">
+              <div>
+                <h3>Freelance</h3>
+                <p class="role">Java Software Engineer (2026)</p>
+              </div>
+            </div>
+            <ul>
+              <li>Built Spring Boot applications for small businesses</li>
+              <li>Reduced administrative workload through automation</li>
+            </ul>
+            <div class="chips">
+              <span>Java</span><span>Spring Boot</span><span>Microservices</span><span>REST APIs</span><span>Agile</span><span>Hibernate</span><span>Git</span>
+            </div>
+          </article>
+
+          <article class="job purple">
+            <div class="job-header">
+              <div>
+                <h3>Stanchion Payment Solutions</h3>
+                <p class="role">Java Software Engineer (2025)</p>
+              </div>
+              <span class="status">Contract completed</span>
+            </div>
+            <ul>
+              <li>Built Spring Boot payment systems</li>
+              <li>Designed scalable microservices</li>
+              <li>Improved system performance and reliability</li>
+            </ul>
+            <div class="chips">
+              <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>PostgreSQL</span><span>SQL Server</span><span>Kafka</span><span>OpenAPI</span><span>Git</span><span>GitHub</span><span>Google Cloud Platform</span><span>Cucumber</span>
+            </div>
+          </article>
+
+          <article class="job cyan">
+            <div class="job-header">
+              <div>
+                <h3>PPS</h3>
+                <p class="role">Java Developer (2023-2024)</p>
+              </div>
+              <span class="status">Contract completed</span>
+            </div>
+            <ul>
+              <li>Developed APIs and enterprise integrations</li>
+              <li>Built secure, high-performance systems</li>
+              <li>Contributed to architecture design</li>
+            </ul>
+            <div class="chips">
+              <span>Java</span><span>Spring Boot</span><span>REST APIs</span><span>PostgreSQL</span><span>SQL Server</span><span>Kafka</span><span>OpenAPI</span><span>SAFe Agile</span><span>Git</span><span>Google Cloud Platform</span><span>Cucumber</span><span>Python</span><span>C#</span>
+            </div>
+          </article>
+
+          <article class="job lime">
+            <div class="job-header">
+              <div>
+                <h3>BMW Group</h3>
+                <p class="role">Full Stack Developer (2021-2023)</p>
+              </div>
+              <span class="status">Contract completed</span>
+            </div>
+            <ul>
+              <li>Developed Angular frontends and Java backend services</li>
+              <li>Built CI/CD pipelines and deployment workflows</li>
+              <li>Delivered scalable enterprise systems</li>
+            </ul>
+            <div class="chips">
+              <span>Angular</span><span>Java</span><span>Spring Boot</span><span>Jenkins</span><span>Git</span><span>AWS Cloud</span><span>Kafka</span><span>Prometheus</span><span>Grafana</span><span>Cucumber</span>
+            </div>
+          </article>
+
+          <article class="job yellow">
+            <div class="job-header">
+              <div>
+                <h3>MHA Management Holdings</h3>
+                <p class="role">Software Developer (2016-2020)</p>
+              </div>
+              <span class="status amber">Transitioned into web development</span>
+            </div>
+            <ul>
+              <li>Built reporting and data processing systems</li>
+              <li>Developed C# WPF and ASP.NET applications</li>
+            </ul>
+            <div class="chips">
+              <span>C#</span><span>.NET</span><span>SQL Server</span><span>SSIS</span><span>SSRS</span><span>XAML</span><span>CSLA</span><span>Crystal Reports</span><span>Power BI</span><span>Power Tools</span>
+            </div>
+          </article>
+
+          <article class="job blue">
+            <div class="job-header">
+              <div>
+                <h3>Tiauto Investment Holdings</h3>
+                <p class="role">Technical Assistant & Data Administrator (2014-2016)</p>
+              </div>
+            </div>
+            <ul>
+              <li>Managed part data creation, maintenance, and reporting</li>
+              <li>Evaluated and processed technical claims</li>
+            </ul>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <span>Building scalable systems that solve real-world problems.</span>
+    </footer>
+  </div>
 </body>
 </html>

@@ -1,13 +1,16 @@
 # Michael Westman Portfolio Website
 
-Personal portfolio website for Michael Westman, Full-Stack Java Developer.
+Personal portfolio website for Michael Westman.
 
 ## Live Site
+
 https://mikeywestie.github.io
 
-## Featured Projects
-- https://github.com/mikeywestie/ecommerce-api
-- https://github.com/mikeywestie/ecommerce-admin-ui
+## Files
+
+- index.html
+- styles.css
 
 ## Deployment
-Push the contents of this repository to the `main` branch and enable GitHub Pages.
+
+Upload `index.html`, `styles.css`, and `README.md` to the root of the `mikeywestie.github.io` repository and enable GitHub Pages from the `main` branch.
