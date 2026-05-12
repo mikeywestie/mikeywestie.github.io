@@ -17,3 +17,8 @@ https://mikeywestie.github.io
 ## Deployment
 
 Upload `index.html`, `styles.css`, and `README.md` to the root of the `mikeywestie.github.io` repository and enable GitHub Pages from the `main` branch.
+
+
+## Premium version
+
+This version uses inline SVG technology icons for the hero tiles instead of JPG/PNG icon images. This keeps the site lightweight, sharp on all screens, and reliable on GitHub Pages.
