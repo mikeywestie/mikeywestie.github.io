@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Michael Westman - Full-Stack Java Developer portfolio." />
+  <title>Michael Westman | Full-Stack Java Developer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="pill">Full-Stack Java Developer • Spring Boot • React • Enterprise Systems</p>
+      <h1>Michael Westman</h1>
+      <p class="subtitle">
+        I build scalable, secure, production-style applications using Java 21, Spring Boot 3,
+        Kafka, PostgreSQL, Docker, Prometheus, Grafana, and React.
+      </p>
+      <div class="buttons">
+        <a class="btn primary" href="https://github.com/mikeywestie" target="_blank">GitHub</a>
+        <a class="btn secondary" href="https://linkedin.com/in/michael-westman-219178188" target="_blank">LinkedIn</a>
+        <a class="btn secondary" href="mailto:mikeywestman@gmail.com">Email Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Featured Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>E-Commerce API</h3>
+          <p>Production-style Spring Boot backend with JWT security, Kafka, PostgreSQL, Flyway, Docker, and observability.</p>
+          <a href="https://github.com/mikeywestie/ecommerce-api" target="_blank">View Repository →</a>
+        </article>
+
+        <article class="card">
+          <h3>Ecommerce Admin UI</h3>
+          <p>React + TypeScript dashboard for managing orders, inventory, payments, and system health.</p>
+          <a href="https://github.com/mikeywestie/ecommerce-admin-ui" target="_blank">View Repository →</a>
+        </article>
+
+        <article class="card">
+          <h3>ARIA Assistant</h3>
+          <p>AI-powered Java assistant concept using JavaFX, speech recognition, and conversational AI.</p>
+          <a href="https://github.com/mikeywestie/AdvancedResponsiveIntelligentAssistant" target="_blank">View Repository →</a>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>Technology Stack</h2>
+      <div class="tags">
+        <span>Java 21</span><span>Spring Boot 3</span><span>Kafka</span><span>PostgreSQL</span>
+        <span>Docker</span><span>JWT/OAuth2</span><span>Prometheus</span><span>Grafana</span>
+        <span>React</span><span>TypeScript</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Professional Experience</h2>
+      <div class="grid">
+        <article class="card"><h3>BMW South Africa</h3><p>Worked on modernization initiatives and microservices-oriented architecture.</p></article>
+        <article class="card"><h3>PPS</h3><p>Built secure APIs exposed through API gateways using OAuth2.</p></article>
+        <article class="card"><h3>Stanchion Payment Solutions</h3><p>Developed payment-focused services with Java 21 and Spring Boot 3.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Michael Westman • Build. Scale. Repeat.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
