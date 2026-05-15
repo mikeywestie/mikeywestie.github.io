@@ -40,7 +40,7 @@ h1 span { color: var(--cyan); text-shadow: 0 0 22px rgba(34,211,238,.5); }
 .contact-grid > * { padding: 10px 12px; border-radius: 14px; background: rgba(148,163,184,.08); border: 1px solid rgba(148,163,184,.16); color: #dbeafe; }
 .action-row { display: flex; flex-wrap: wrap; gap: 10px; }
 .neon-button { padding: 10px 14px; border-radius: 999px; border: 1px solid currentColor; font-weight: 800; }
-.neon-button.green { color: var(--green); } .neon-button.cyan { color: var(--cyan); } .neon-button.purple { color: var(--purple); } .neon-button.blue { color: var(--blue); }
+.neon-button.green { color: var(--green); } .neon-button.cyan { color: var(--cyan); } .neon-button.purple { color: var(--purple); } .neon-button.blue { color: var(--blue); } .neon-button.download { color: var(--lime); background: rgba(163,230,53,.08); box-shadow: 0 0 18px rgba(163,230,53,.16); }
 .icon-grid { padding: 18px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
 .tech-trigger {
   min-height: 106px;

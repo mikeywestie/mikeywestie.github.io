@@ -1,17 +1,18 @@
-# Michael Westman Portfolio Modal Version
+# Michael Westman Portfolio
 
 Open `index.html` in your browser.
 
 What changed:
-- The hero `premium-icon-grid` no longer opens external links.
-- Each tech icon opens a neon modal popup.
-- The popup explains what Michael did with that technology.
-- PPS experience was expanded with a right-side icon and greatest accomplishment section.
+- Added a **Download CV** button in the hero action row.
+- Added a **Download CV** link under Quick Links.
+- Included the latest CV PDF as `CV - Michael Westman.pdf`.
+- Kept the neon modal technology popup behaviour intact.
 
 Files:
 - `index.html`
 - `styles.css`
 - `script.js`
+- `profile.jpg`
+- `CV - Michael Westman.pdf`
 
-Optional:
-- Add your own `profile.jpg` into this folder to show your profile image.
+To publish on GitHub Pages, upload/commit all files to your `mikeywestie.github.io` repository root.
