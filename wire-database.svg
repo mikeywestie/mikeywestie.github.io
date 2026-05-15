@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="520" viewBox="0 0 240 240">
+<defs><radialGradient id="bg" cx="50%" cy="45%" r="75%"><stop offset="0%" stop-color="#0b3a52"/><stop offset="55%" stop-color="#071827"/><stop offset="100%" stop-color="#020617"/></radialGradient><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+<rect width="240" height="240" fill="url(#bg)"/>
+<g stroke="#22d3ee" stroke-width=".7" opacity=".16"><path d="M40 40H200V200H40Z"/><path d="M120 30V210M30 120H210"/></g>
+<g fill="none" stroke="#67e8f9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)">
+<ellipse cx="120" cy="62" rx="62" ry="24"/>
+<path d="M58 62V166C58 179 86 190 120 190C154 190 182 179 182 166V62"/>
+<path d="M58 100C58 113 86 124 120 124C154 124 182 113 182 100"/>
+<path d="M58 136C58 149 86 160 120 160C154 160 182 149 182 136"/>
+</g>
+<text x="120" y="218" text-anchor="middle" font-family="Arial" font-size="13" font-weight="800" letter-spacing="3" fill="#22d3ee">DATABASE</text>
+</svg>
