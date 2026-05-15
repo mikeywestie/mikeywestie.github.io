@@ -152,18 +152,6 @@ A Jarvis-inspired AI agent platform focused on:
 
 ---
 
-## 📈 GitHub Stats
-
-<div align="center">
-
-![Michael's GitHub stats](https://github-readme-stats.vercel.app/api?username=mikeywestie\&show_icons=true\&theme=tokyonight)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=mikeywestie\&layout=compact\&theme=tokyonight)
-
-</div>
-
----
-
 ## 🎯 Current Focus
 
 I’m currently focused on:
