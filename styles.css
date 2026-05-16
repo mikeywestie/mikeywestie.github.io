@@ -219,7 +219,7 @@ footer { display: flex; justify-content: space-between; gap: 12px; color: var(--
 }
 
 .hero {
-  grid-template-columns: 260px 1fr 320px;
+  grid-template-columns: 260px 1fr;
   gap: 28px;
   align-items: stretch;
 }
@@ -287,7 +287,7 @@ h1 {
   }
 
   .hero {
-    grid-template-columns: 220px 1fr 280px;
+    grid-template-columns: 220px 1fr;
     gap: 22px;
   }
 
@@ -974,3 +974,6 @@ body::before {
     opacity: 0.08;
   }
 }
+
+
+.signature-footer { display: none !important; }
