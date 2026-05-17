@@ -977,3 +977,167 @@ body::before {
 
 
 .signature-footer { display: none !important; }
+
+
+/* =========================================================
+   MOBILE RESPONSIVENESS FIX
+   Prevent horizontal overflow on phones
+   ========================================================= */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .page-shell {
+    width: calc(100% - 20px);
+    max-width: 100%;
+    padding: 16px 0;
+    margin: 0 auto;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero-main {
+    padding: 0;
+  }
+
+  h1 {
+    font-size: clamp(2.2rem, 10vw, 3.6rem);
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  .tagline {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .action-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .action-row .neon-button {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .left-column,
+  .right-column {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .status {
+    white-space: normal;
+    margin-top: 6px;
+  }
+
+  .job-icon {
+    display: none;
+  }
+
+  .chips {
+    gap: 6px;
+  }
+
+  .chips span {
+    font-size: 0.75rem;
+    padding: 6px 9px;
+  }
+
+  .portrait-placeholder img {
+    min-height: 240px;
+  }
+
+  .panel,
+  .job,
+  .project-card {
+    padding: 18px;
+  }
+
+  .tech-modal-card {
+    width: min(94vw, 640px);
+    padding: 24px;
+  }
+
+  .modal-layout {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .modal-image-panel,
+  .modal-image-panel img {
+    min-height: 220px;
+    height: 220px;
+  }
+
+  .floating-astronaut,
+  .floating-planet,
+  .floating-rocket {
+    opacity: 0.08;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: clamp(1.9rem, 11vw, 2.8rem);
+  }
+
+  .eyebrow {
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+  }
+
+  .contact-grid > * {
+    padding: 9px 10px;
+    font-size: 0.9rem;
+  }
+
+  .panel,
+  .job,
+  .project-card {
+    border-radius: 22px;
+    padding: 16px;
+  }
+
+  .portrait-placeholder img {
+    min-height: 200px;
+  }
+}
