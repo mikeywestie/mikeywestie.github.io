@@ -1,11 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="220" height="220" viewBox="0 0 220 220">
-<defs>
-  <radialGradient id="p" cx="35%" cy="30%">
-    <stop offset="0%" stop-color="#67e8f9"/>
-    <stop offset="60%" stop-color="#3b82f6"/>
-    <stop offset="100%" stop-color="#6d28d9"/>
-  </radialGradient>
-</defs>
-<circle cx="110" cy="110" r="52" fill="url(#p)"/>
-<ellipse cx="110" cy="110" rx="86" ry="18" fill="none" stroke="rgba(255,255,255,0.45)" stroke-width="6"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800" height="800" viewBox="0 0 800 800" role="img">
+  <title>Cartoon Comet - Transparent Background</title>
+
+  <defs>
+    <linearGradient id="tailGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0"/>
+      <stop offset="45%" stop-color="#60a5fa" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <radialGradient id="cometGrad" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="38%" stop-color="#93c5fd"/>
+      <stop offset="75%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </radialGradient>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <g transform="rotate(-18 400 400)">
+    <!-- Long glowing tail -->
+    <path d="M115 420
+             C250 300, 420 285, 585 365
+             C430 390, 270 450, 115 420 Z"
+          fill="url(#tailGrad)"
+          opacity="0.85"
+          filter="url(#softGlow)"/>
+
+    <path d="M150 490
+             C300 430, 445 420, 590 385
+             C440 500, 295 535, 150 490 Z"
+          fill="#a855f7"
+          opacity="0.22"
+          filter="url(#softGlow)"/>
+
+    <path d="M170 350
+             C300 335, 440 350, 592 370"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="10"
+          stroke-linecap="round"
+          opacity="0.45"/>
+
+    <!-- Comet head -->
+    <circle cx="585" cy="380" r="82"
+            fill="url(#cometGrad)"
+            stroke="#0f172a"
+            stroke-width="8"
+            filter="url(#softGlow)"/>
+
+    <!-- Craters -->
+    <circle cx="555" cy="360" r="14" fill="#1e3a8a" opacity="0.35"/>
+    <circle cx="610" cy="405" r="11" fill="#1e3a8a" opacity="0.28"/>
+    <circle cx="625" cy="350" r="8" fill="#1e3a8a" opacity="0.25"/>
+
+    <!-- Highlights -->
+    <circle cx="555" cy="335" r="16" fill="#ffffff" opacity="0.65"/>
+    <circle cx="590" cy="315" r="7" fill="#ffffff" opacity="0.5"/>
+
+    <!-- Sparkles -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="240" cy="300" r="4"/>
+      <circle cx="320" cy="520" r="5"/>
+      <circle cx="430" cy="285" r="3"/>
+      <circle cx="480" cy="500" r="3"/>
+    </g>
+  </g>
 </svg>

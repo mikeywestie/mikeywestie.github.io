@@ -87,3 +87,28 @@ document.addEventListener("keydown", event => {
     closeTechModal();
   }
 });
+
+/* =========================================================
+   Correct experience accordion
+   Click the company/title area to expand or minimize
+   ========================================================= */
+
+document.querySelectorAll(".timeline-panel .job").forEach(job => {
+  const header = job.querySelector(".job-header");
+  if (!header) return;
+
+  header.addEventListener("click", () => {
+    const isNowCollapsed = job.classList.toggle("collapsed");
+    header.setAttribute("aria-expanded", String(!isNowCollapsed));
+  });
+
+  header.addEventListener("keydown", event => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      const isNowCollapsed = job.classList.toggle("collapsed");
+      header.setAttribute("aria-expanded", String(!isNowCollapsed));
+    }
+  });
+});
+
+
