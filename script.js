@@ -112,3 +112,31 @@ document.querySelectorAll(".timeline-panel .job").forEach(job => {
 });
 
 
+
+
+/* =========================================================
+   Google Analytics Portfolio Tracking
+   ========================================================= */
+
+function trackPortfolioClick(eventName, label) {
+  if (typeof gtag !== "function") return;
+
+  gtag("event", eventName, {
+    event_category: "Portfolio Button Clicks",
+    event_label: label
+  });
+
+  console.log("Tracked:", label);
+}
+
+document.querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    const label =
+      link.getAttribute("aria-label") ||
+      link.getAttribute("title") ||
+      link.textContent.trim() ||
+      link.href;
+
+    trackPortfolioClick("portfolio_link_click", label);
+  });
+});
