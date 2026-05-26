@@ -152,7 +152,15 @@ h1 span { color: var(--cyan); text-shadow: 0 0 22px rgba(34,211,238,.5); }
 .latest-thoughts-header .project-label { color: var(--purple); }
 .latest-thoughts-header h2 { margin: 0; font-size: clamp(1.35rem, 2vw, 1.85rem); }
 .latest-thoughts-header p { margin: 0; max-width: 680px; font-size: .94rem; color: var(--muted); }
-.latest-linkedin-profile {
+.latest-thoughts-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 8px;
+}
+.latest-linkedin-profile,
+.latest-youtube-profile {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -168,7 +176,9 @@ h1 span { color: var(--cyan); text-shadow: 0 0 22px rgba(34,211,238,.5); }
   box-shadow: 0 0 22px rgba(34,211,238,.08);
   transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
 }
-.latest-linkedin-profile:hover { transform: translateY(-2px); border-color: rgba(125,211,252,.55); box-shadow: 0 0 28px rgba(34,211,238,.18), 0 0 32px rgba(168,85,247,.12); }
+.latest-linkedin-profile:hover,
+.latest-youtube-profile:hover { transform: translateY(-2px); border-color: rgba(125,211,252,.55); box-shadow: 0 0 28px rgba(34,211,238,.18), 0 0 32px rgba(168,85,247,.12); }
+.latest-youtube-profile { color: #fecaca; background: linear-gradient(135deg, rgba(248,113,113,.12), rgba(168,85,247,.14)); border-color: rgba(248,113,113,.28); }
 .linkedin-mini-icon {
   display: inline-grid;
   place-items: center;
@@ -257,8 +267,8 @@ h1 span { color: var(--cyan); text-shadow: 0 0 22px rgba(34,211,238,.5); }
 .moon-1 {
   right: 4%;
   top: 8%;
-  width: 150px;
-  height: 150px;
+  width: 230px;
+  height: 230px;
   opacity: .42;
   filter:
     drop-shadow(0 0 24px rgba(34,211,238,.25))
@@ -327,8 +337,8 @@ footer { display: flex; justify-content: space-between; gap: 12px; color: var(--
 @media (max-width: 768px) {
 
   .moon-1 {
-    width: 95px;
-    height: 95px;
+    width: 145px;
+    height: 145px;
     opacity: .24;
     top: 4%;
     right: -2%;
