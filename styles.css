@@ -1927,3 +1927,226 @@ body::after {
   opacity: 0.9;
   transform: translateX(2px);
 }
+
+
+/* =========================================================
+   LATEST THOUGHTS: LinkedIn post cards
+   ========================================================= */
+
+.latest-thoughts-panel {
+  position: relative;
+  overflow: hidden;
+  border-color: rgba(168, 85, 247, .25);
+}
+
+.latest-thoughts-panel::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 15% 10%, rgba(34,211,238,.14), transparent 32%),
+    radial-gradient(circle at 85% 20%, rgba(168,85,247,.16), transparent 34%),
+    linear-gradient(135deg, rgba(34,211,238,.04), rgba(168,85,247,.05));
+  opacity: .9;
+}
+
+.latest-thoughts-header,
+.latest-thoughts-grid {
+  position: relative;
+  z-index: 1;
+}
+
+.latest-thoughts-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+
+.latest-thoughts-header .project-label {
+  margin: 0 0 6px;
+  color: var(--purple);
+}
+
+.latest-thoughts-header h2 {
+  margin-bottom: 8px;
+}
+
+.latest-thoughts-header p:last-child {
+  margin: 0;
+  color: var(--muted);
+}
+
+.latest-thoughts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.thought-card {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  background:
+    linear-gradient(145deg, rgba(15,23,42,.84), rgba(2,6,23,.72));
+  border: 1px solid rgba(168,85,247,.24);
+  box-shadow:
+    0 18px 46px rgba(0,0,0,.28),
+    inset 0 0 24px rgba(34,211,238,.035);
+  transition:
+    transform .28s ease,
+    border-color .28s ease,
+    box-shadow .28s ease,
+    background .28s ease;
+}
+
+.thought-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(168,85,247,.72);
+  background:
+    linear-gradient(145deg, rgba(18,27,55,.92), rgba(4,9,26,.82));
+  box-shadow:
+    0 24px 60px rgba(0,0,0,.36),
+    0 0 28px rgba(168,85,247,.18),
+    0 0 42px rgba(34,211,238,.10);
+}
+
+.thought-image-wrap {
+  height: 180px;
+  overflow: hidden;
+  background: rgba(2,6,23,.72);
+  border-bottom: 1px solid rgba(148,163,184,.15);
+}
+
+.thought-image-wrap img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transform: scale(1.01);
+  transition: transform .4s ease, filter .4s ease;
+}
+
+.thought-card:hover .thought-image-wrap img {
+  transform: scale(1.055);
+  filter: saturate(1.08) brightness(1.06);
+}
+
+.thought-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 18px;
+}
+
+.thought-badge {
+  align-self: flex-start;
+  padding: 6px 10px;
+  border-radius: 999px;
+  color: #d8b4fe;
+  background: rgba(168,85,247,.13);
+  border: 1px solid rgba(168,85,247,.32);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-size: .68rem;
+  font-weight: 900;
+}
+
+.thought-card h3 {
+  margin: 13px 0 8px;
+  color: #f8fdff;
+  line-height: 1.15;
+}
+
+.thought-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.thought-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 16px 0;
+}
+
+.thought-tags span {
+  padding: 6px 9px;
+  border-radius: 999px;
+  color: #c4b5fd;
+  background: rgba(99,102,241,.12);
+  border: 1px solid rgba(168,85,247,.20);
+  font-size: .76rem;
+}
+
+.thought-link {
+  margin-top: auto;
+  color: #c084fc;
+  font-weight: 900;
+  letter-spacing: .02em;
+  transition: transform .25s ease, color .25s ease;
+}
+
+.thought-card:hover .thought-link {
+  color: #67e8f9;
+  transform: translateX(4px);
+}
+
+.fade-in-card {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: latestThoughtFadeIn .7s ease forwards;
+}
+
+.fade-in-card:nth-child(2) {
+  animation-delay: .12s;
+}
+
+.fade-in-card:nth-child(3) {
+  animation-delay: .24s;
+}
+
+@keyframes latestThoughtFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1100px) {
+  .latest-thoughts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thought-image-wrap {
+    height: 240px;
+  }
+}
+
+@media (max-width: 640px) {
+  .latest-thoughts-header {
+    text-align: left;
+  }
+
+  .thought-image-wrap {
+    height: 190px;
+  }
+
+  .thought-card-body {
+    padding: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-in-card,
+  .thought-card,
+  .thought-image-wrap img,
+  .thought-link {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
