@@ -1,3 +1,4 @@
+
 const techContent = {
   api: {
     label: "Backend Engineering",
@@ -54,7 +55,7 @@ let lastFocusedElement = null;
 
 function openTechModal(key) {
   const tech = techContent[key];
-  if (!tech) return;
+  if (!tech || !modal) return;
   lastFocusedElement = document.activeElement;
   modalLabel.textContent = tech.label;
   modalTitle.textContent = tech.title;
@@ -63,12 +64,12 @@ function openTechModal(key) {
   if (modalImage) modalImage.src = tech.image || "wire-api.svg";
   modal.classList.add("show");
   modal.setAttribute("aria-hidden", "false");
-  closeBtn.focus();
+  closeBtn?.focus();
 }
 
 function closeTechModal() {
-  modal.classList.remove("show");
-  modal.setAttribute("aria-hidden", "true");
+  modal?.classList.remove("show");
+  modal?.setAttribute("aria-hidden", "true");
   if (lastFocusedElement) lastFocusedElement.focus();
 }
 
@@ -76,22 +77,17 @@ document.querySelectorAll(".tech-trigger").forEach(button => {
   button.addEventListener("click", () => openTechModal(button.dataset.tech));
 });
 
-closeBtn.addEventListener("click", closeTechModal);
+closeBtn?.addEventListener("click", closeTechModal);
 
-modal.addEventListener("click", event => {
+modal?.addEventListener("click", event => {
   if (event.target === modal) closeTechModal();
 });
 
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && modal.classList.contains("show")) {
+  if (event.key === "Escape" && modal?.classList.contains("show")) {
     closeTechModal();
   }
 });
-
-/* =========================================================
-   Correct experience accordion
-   Click the company/title area to expand or minimize
-   ========================================================= */
 
 document.querySelectorAll(".timeline-panel .job").forEach(job => {
   const header = job.querySelector(".job-header");
@@ -111,12 +107,19 @@ document.querySelectorAll(".timeline-panel .job").forEach(job => {
   });
 });
 
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.animationPlayState = "running";
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.18 });
 
-
-
-/* =========================================================
-   Google Analytics Portfolio Tracking
-   ========================================================= */
+document.querySelectorAll(".thought-card").forEach(card => {
+  card.style.animationPlayState = "paused";
+  revealObserver.observe(card);
+});
 
 function trackPortfolioClick(eventName, label) {
   if (typeof gtag !== "function") return;
@@ -125,8 +128,6 @@ function trackPortfolioClick(eventName, label) {
     event_category: "Portfolio Button Clicks",
     event_label: label
   });
-
-  console.log("Tracked:", label);
 }
 
 document.querySelectorAll("a").forEach(link => {
