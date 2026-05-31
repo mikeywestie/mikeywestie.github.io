@@ -43,6 +43,13 @@
         <div class="portrait-placeholder image-placeholder">
           <img src="profile.jpg" alt="Michael Westman" />
         </div>
+        <button class="intro-button portrait-intro-button" type="button" onclick="openIntroVideo()" aria-label="Watch Michael Westman introduction video">
+          <span class="intro-button-icon">▶</span>
+          <span>
+            <strong>Watch Introduction</strong>
+          </span>
+        </button>
+
       </div>
 
       <div class="hero-main">
@@ -575,5 +582,58 @@
   </div>
 
   <script src="script.js"></script>
+
+  <div class="intro-video-modal" id="introVideoModal" aria-hidden="true" role="dialog" aria-label="Michael Westman introduction video">
+    <div class="intro-video-backdrop" onclick="closeIntroVideo()"></div>
+    <div class="intro-video-card video-only-modal" role="document">
+      <button class="intro-video-close" type="button" onclick="closeIntroVideo()" aria-label="Close intro video">×</button>
+      <video id="introVideoPlayer" controls playsinline preload="metadata" poster="public/images/intro-poster.png">
+        <source src="public/videos/intro_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+
+  <script>
+    function openIntroVideo() {
+      const modal = document.getElementById("introVideoModal");
+      const video = document.getElementById("introVideoPlayer");
+
+      if (!modal) return;
+
+      modal.classList.add("show");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+
+      if (video) {
+        video.currentTime = 0;
+        video.play().catch(function () {});
+      }
+    }
+
+    function closeIntroVideo() {
+      const modal = document.getElementById("introVideoModal");
+      const video = document.getElementById("introVideoPlayer");
+
+      if (!modal) return;
+
+      modal.classList.remove("show");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+
+      if (video) {
+        video.pause();
+        video.currentTime = 0;
+      }
+    }
+
+    document.addEventListener("keydown", function (event) {
+      const modal = document.getElementById("introVideoModal");
+      if (event.key === "Escape" && modal && modal.classList.contains("show")) {
+        closeIntroVideo();
+      }
+    });
+  </script>
+
 </body>
 </html>
