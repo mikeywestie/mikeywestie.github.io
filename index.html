@@ -17,6 +17,7 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description" content="Michael Westman - Full-Stack Java Developer portfolio." />
   <title>Michael Westman | Full-Stack Java Developer</title>
   <link rel="stylesheet" href="styles.css" />
@@ -46,7 +47,8 @@
         <button class="intro-button portrait-intro-button" type="button" onclick="openIntroVideo()" aria-label="Watch Michael Westman introduction video">
           <span class="intro-button-icon">▶</span>
           <span>
-            <strong>Watch Introduction</strong>
+            <strong>Watch My Channel Intro</strong>
+            <small>YouTube & creative projects</small>
           </span>
         </button>
 
@@ -583,47 +585,181 @@
 
   <script src="script.js"></script>
 
-  <div class="intro-video-modal" id="introVideoModal" aria-hidden="true" role="dialog" aria-label="Michael Westman introduction video">
+  <div class="intro-video-modal" id="introVideoModal" aria-hidden="true" role="dialog" aria-label="Michael Westman YouTube channel introduction">
     <div class="intro-video-backdrop" onclick="closeIntroVideo()"></div>
-    <div class="intro-video-card video-only-modal" role="document">
-      <button class="intro-video-close" type="button" onclick="closeIntroVideo()" aria-label="Close intro video">×</button>
-      <video id="introVideoPlayer" controls playsinline preload="metadata" poster="public/images/intro-poster.png">
-        <source src="public/videos/intro_video.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="intro-video-card youtube-channel-modal" role="document">
+      <button class="intro-video-close" type="button" onclick="closeIntroVideo()" aria-label="Close YouTube channel showcase">×</button>
+
+      <div class="youtube-showcase-header">
+        <p class="project-label">YouTube &amp; Creative Projects</p>
+        <h2><span class="section-icon">🎥</span> Meet Michael Westman</h2>
+        <p>
+          A short portfolio introduction streamed from YouTube, with access to my AI nature documentaries, piano covers,
+          and creative technology projects.
+        </p>
+      </div>
+
+      <div class="youtube-embed-wrap" id="introVideoFrameWrap">
+        <iframe
+          id="introYouTubePlayer"
+          title="Michael Westman Portfolio Introduction on YouTube"
+          data-video-id="b39cQaq8YBg"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+
+        <video
+          id="introLocalPlayer"
+          class="intro-local-player"
+          controls
+          playsinline
+          preload="metadata"
+          poster="profile.jpg">
+          <source src="public/videos/intro_video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <div class="intro-video-fallback-notice" id="introFallbackNotice" aria-live="polite">
+          <strong>Playing the local portfolio video</strong>
+          <span>YouTube streaming is unavailable in this preview.</span>
+        </div>
+      </div>
+
+      <div class="youtube-showcase-footer">
+        <div>
+          <strong>Explore the channel</strong>
+          <p>AI documentaries, personal creative work, music, and portfolio content in one place.</p>
+        </div>
+        <a class="youtube-channel-button"
+           href="https://www.youtube.com/@MikeyWestman"
+           target="_blank"
+           rel="noreferrer"
+           aria-label="Visit Michael Westman's YouTube channel">
+          Visit My YouTube Channel →
+        </a>
+      </div>
     </div>
   </div>
 
   <script>
+    const INTRO_VIDEO_ID = "b39cQaq8YBg";
+    const INTRO_LOCAL_VIDEO = "public/videos/intro_video.mp4";
+    let introFallbackTimer = null;
+
+    function buildIntroVideoUrl(autoplay = true) {
+      const params = new URLSearchParams({
+        rel: "0",
+        modestbranding: "1",
+        playsinline: "1"
+      });
+
+      if (autoplay) params.set("autoplay", "1");
+
+      if (location.protocol === "http:" || location.protocol === "https:") {
+        params.set("origin", location.origin);
+      }
+
+      return `https://www.youtube.com/embed/${INTRO_VIDEO_ID}?${params.toString()}`;
+    }
+
+    function showYouTubeIntro() {
+      const wrap = document.getElementById("introVideoFrameWrap");
+      const player = document.getElementById("introYouTubePlayer");
+      const localPlayer = document.getElementById("introLocalPlayer");
+      const notice = document.getElementById("introFallbackNotice");
+
+      wrap?.classList.remove("using-local-video");
+      notice?.classList.remove("show");
+
+      if (localPlayer) {
+        localPlayer.pause();
+        localPlayer.currentTime = 0;
+        localPlayer.removeAttribute("src");
+        localPlayer.load();
+      }
+
+      if (player) {
+        player.style.display = "block";
+        player.src = buildIntroVideoUrl(true);
+        player.onerror = () => showLocalIntroVideo("YouTube streaming is unavailable, so the local portfolio video is playing instead.");
+      }
+    }
+
+    function showLocalIntroVideo(message) {
+      const wrap = document.getElementById("introVideoFrameWrap");
+      const player = document.getElementById("introYouTubePlayer");
+      const localPlayer = document.getElementById("introLocalPlayer");
+      const notice = document.getElementById("introFallbackNotice");
+
+      clearTimeout(introFallbackTimer);
+      wrap?.classList.add("using-local-video");
+
+      if (player) {
+        player.removeAttribute("src");
+        player.style.display = "none";
+      }
+
+      if (notice) {
+        notice.querySelector("span").textContent = message || "YouTube streaming is unavailable in this preview.";
+        notice.classList.add("show");
+      }
+
+      if (localPlayer) {
+        if (!localPlayer.querySelector("source")) {
+          const source = document.createElement("source");
+          source.src = INTRO_LOCAL_VIDEO;
+          source.type = "video/mp4";
+          localPlayer.appendChild(source);
+        }
+        localPlayer.style.display = "block";
+        localPlayer.load();
+        localPlayer.play().catch(() => {
+          // Browser may block autoplay; the user can press play manually.
+        });
+      }
+    }
+
     function openIntroVideo() {
       const modal = document.getElementById("introVideoModal");
-      const video = document.getElementById("introVideoPlayer");
-
       if (!modal) return;
 
       modal.classList.add("show");
       modal.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
 
-      if (video) {
-        video.currentTime = 0;
-        video.play().catch(function () {});
+      clearTimeout(introFallbackTimer);
+
+      // Local file previews cannot provide the HTTP referrer YouTube requires.
+      // In that case, default straight to the stored MP4 file.
+      if (location.protocol === "file:") {
+        showLocalIntroVideo("YouTube embeds cannot stream from a direct file preview, so the stored portfolio video is playing instead.");
+        return;
       }
+
+      showYouTubeIntro();
     }
 
     function closeIntroVideo() {
       const modal = document.getElementById("introVideoModal");
-      const video = document.getElementById("introVideoPlayer");
+      const player = document.getElementById("introYouTubePlayer");
+      const localPlayer = document.getElementById("introLocalPlayer");
 
       if (!modal) return;
 
+      clearTimeout(introFallbackTimer);
       modal.classList.remove("show");
       modal.setAttribute("aria-hidden", "true");
       document.body.style.overflow = "";
 
-      if (video) {
-        video.pause();
-        video.currentTime = 0;
+      if (player) {
+        player.removeAttribute("src");
+      }
+
+      if (localPlayer) {
+        localPlayer.pause();
+        localPlayer.currentTime = 0;
       }
     }
 
