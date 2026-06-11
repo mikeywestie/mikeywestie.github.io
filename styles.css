@@ -1558,3 +1558,211 @@ footer { display: flex; justify-content: space-between; gap: 12px; color: var(--
     right: -6px !important;
   }
 }
+
+
+/* Flagship e-commerce portfolio showcase */
+.featured-projects-heading {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.featured-projects-heading h2 {
+  margin: 4px 0 6px;
+}
+
+.featured-projects-subtitle {
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+}
+
+.live-demo-pill,
+.quick-link-live {
+  border: 1px solid rgba(34, 197, 94, .42) !important;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(34, 197, 94, .18), transparent 34%),
+    rgba(34, 197, 94, .10) !important;
+  color: #bbf7d0 !important;
+  box-shadow: 0 0 24px rgba(34, 197, 94, .12);
+}
+
+.live-demo-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: .85rem;
+  font-weight: 1000;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.live-demo-pill:hover,
+.quick-link-live:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 197, 94, .72) !important;
+  box-shadow: 0 0 34px rgba(34, 197, 94, .20);
+}
+
+.project-card-featured {
+  margin-bottom: 16px;
+  padding: clamp(18px, 3vw, 26px);
+  border-color: rgba(34, 211, 238, .34) !important;
+  background:
+    radial-gradient(circle at 12% 10%, rgba(34,211,238,.15), transparent 34%),
+    radial-gradient(circle at 88% 20%, rgba(34,197,94,.10), transparent 34%),
+    linear-gradient(145deg, rgba(15,23,42,.94), rgba(2,6,23,.86));
+}
+
+.project-card-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.project-card-featured h3 {
+  margin: 0 0 12px;
+  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
+  line-height: 1.05;
+  color: #f8fdff;
+}
+
+.project-status-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, .12);
+  border: 1px solid rgba(34, 197, 94, .28);
+  color: #bbf7d0;
+  font-size: .74rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.project-highlights {
+  margin: 16px 0;
+  padding-left: 20px;
+  color: var(--muted);
+}
+
+.project-highlights li {
+  margin: 7px 0;
+}
+
+.project-tech-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0;
+}
+
+.project-tech-row span {
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(34,211,238,.08);
+  border: 1px solid rgba(34,211,238,.18);
+  color: #bae6fd;
+  font-size: .78rem;
+  font-weight: 800;
+}
+
+.project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.project-action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 13px;
+  border-radius: 999px;
+  border: 1px solid rgba(125,211,252,.28);
+  background: rgba(34,211,238,.07);
+  color: #bae6fd !important;
+  font-weight: 900;
+  font-size: .86rem;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.project-action.primary {
+  border-color: rgba(34,197,94,.44);
+  background: rgba(34,197,94,.12);
+  color: #bbf7d0 !important;
+}
+
+.project-action:hover {
+  transform: translateY(-2px);
+  border-color: rgba(125,211,252,.58);
+  box-shadow: 0 0 26px rgba(34,211,238,.14);
+}
+
+.project-grid-secondary {
+  margin-top: 16px;
+}
+
+@media (max-width: 760px) {
+  .featured-projects-heading,
+  .project-card-topline {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .live-demo-pill,
+  .project-action {
+    width: 100%;
+  }
+
+  .project-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .project-card-featured h3 {
+    font-size: 1.45rem;
+  }
+}
+
+/* Layout correction for the larger e-commerce showcase */
+.right-column {
+  align-items: stretch;
+}
+
+.top-panels-row {
+  align-items: start !important;
+}
+
+.top-panels-row > .panel,
+.profile-panel,
+.community-panel {
+  height: auto !important;
+  align-self: start !important;
+}
+
+.featured-projects {
+  width: 100%;
+  height: auto !important;
+  align-self: start !important;
+}
+
+@media (min-width: 1100px) {
+  .featured-projects .accordion-content {
+    display: grid;
+    gap: 18px;
+  }
+
+  .project-card-featured {
+    min-height: auto;
+  }
+}

@@ -18,7 +18,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta name="description" content="Michael Westman - Full-Stack Java Developer portfolio." />
+  <meta name="description" content="Michael Westman - Full-Stack Java Developer portfolio featuring a live Spring Boot, React, PostgreSQL e-commerce platform." />
   <title>Michael Westman | Full-Stack Java Developer</title>
   <link rel="icon" href="public/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="public/favicon.png">
@@ -165,6 +165,8 @@
         <section class="panel quick-links">
           <h2><span class="section-icon">🔗</span> Quick Links</h2>
           <a href="https://github.com/mikeywestie" target="_blank" rel="noreferrer">GitHub Profile →</a>
+          <a class="quick-link-live" href="https://mikeywestie.github.io/ecommerce-admin-ui" target="_blank" rel="noreferrer">🟢 Live E-Commerce Demo →</a>
+          <a href="https://ecommerce-api-xrkk.onrender.com/swagger-ui.html" target="_blank" rel="noreferrer">Swagger API Docs →</a>
           <a href="https://github.com/mikeywestie/ecommerce-api" target="_blank" rel="noreferrer">E-Commerce Backend →</a>
           <a href="https://github.com/mikeywestie/ecommerce-admin-ui" target="_blank" rel="noreferrer">Admin Dashboard →</a>
           <a href="https://linkedin.com/in/michael-westman-219178188" target="_blank" rel="noreferrer">LinkedIn →</a>
@@ -180,76 +182,140 @@
       <section class="right-column">
 
         <section class="top-panels-row">
-  <section class="panel">
-          <h2><span class="section-icon">🧠</span> Profile</h2>
-          <p>
-            I’m a Full-Stack Java Developer with 8+ years of experience building secure, scalable applications in fintech, payments, insurance, and automotive industries.
-            I’ve worked with BMW Group, PPS, and Stanchion Payment Solutions, specializing in Java, Spring Boot, Kafka, PostgreSQL, React, and Docker.
-          </p>
-          <p>
-            I’m passionate about software architecture, clean code, and AI-driven development.
-            My flagship project is an event-driven e-commerce platform. Outside of coding, I enjoy playing piano, exploring nature, and spending time with family and friends.
-          </p>
+          <section class="panel profile-panel static-panel">
+            <h2><span class="section-icon">🧠</span> Profile</h2>
+            <p>
+              I’m a Full-Stack Java Developer with 8+ years of experience building secure, scalable applications in fintech, payments, insurance, and automotive industries.
+              I’ve worked with BMW Group, PPS, and Stanchion Payment Solutions, specializing in Java, Spring Boot, Kafka, PostgreSQL, React, and Docker.
+            </p>
+            <p>
+              I’m passionate about software architecture, clean code, and AI-driven development.
+              My flagship project is an event-driven e-commerce platform. Outside of coding, I enjoy playing piano, exploring nature, and spending time with family and friends.
+            </p>
+          </section>
 
+          <section class="panel community-panel static-panel">
+            <h2><span class="section-icon">🐾</span> Community Involvement</h2>
+            <p>
+              Volunteer contributor at <strong>Helping Paws In Need SA</strong>, assisting with the startup and growth of the animal welfare initiative through support for stray animals, local shelters, and donation coordination efforts.
+            </p>
+            <p>
+              <a href="https://www.facebook.com/groups/1522044882894961/"
+                 target="_blank"
+                 rel="noreferrer"
+                 class="community-link">
+                📘 View Helping Paws In Need SA on Facebook →
+              </a>
+            </p>
+            <p>
+              I also support the <strong>Samsung Global Goals</strong> initiative, with particular focus on Life Below Water, Life on Land, and Zero Hunger.
+            </p>
+          </section>
         </section>
 
-  
-<section class="panel">
-  <h2><span class="section-icon">🐾</span> Community Involvement</h2>
+        <section class="panel featured-projects static-panel">
+          <div class="featured-projects-heading">
+            <div>
+              <p class="project-label">Flagship Build</p>
+              <h2><span class="section-icon">🚀</span> Featured Projects</h2>
+              <p class="featured-projects-subtitle">
+                A portfolio-ready software project that recruiters can open, test, and explore end-to-end.
+              </p>
+            </div>
 
-  <p>
-  Volunteer contributor at <strong>Helping Paws In Need SA</strong>, assisting with the startup and growth of the animal 
-  welfare initiative through support for stray animals, local shelters, and donation coordination efforts.
-  </p>
+            <a class="live-demo-pill"
+               href="https://mikeywestie.github.io/ecommerce-admin-ui"
+               target="_blank"
+               rel="noreferrer"
+               aria-label="Open the live e-commerce platform demo">
+              🟢 Live Demo
+            </a>
+          </div>
 
-  <p>
-    <a href="https://www.facebook.com/groups/1522044882894961/"
-       target="_blank"
-       rel="noreferrer"
-       class="community-link">
-      📘 View Helping Paws In Need SA on Facebook →
-    </a>
-  </p>
-
-  <p>
-    I also support the <strong>Samsung Global Goals</strong> initiative, with particular focus on
-    <strong>Life Below Water</strong>, <strong>Life on Land</strong>, and <strong>Zero Hunger</strong>.
-  </p>
-
-  <p>
-    <a href="https://www.samsung.com/globalgoals/"
-       target="_blank"
-       rel="noreferrer"
-       class="community-link">
-      🌍 See how you can make a difference with Samsung Global Goals →
-    </a>
-  </p>
-</section>
-
-</section>
-
-<section class="panel featured-projects static-panel">
-          <h2><span class="section-icon">🚀</span> Featured Projects</h2>
           <div class="accordion-content">
-          <div class="project-grid">
-            <article class="project-card">
-              <p class="project-label">Backend Platform</p>
-              <h3>E-Commerce RESTful API</h3>
-              <p>Spring Boot backend project showcasing secure APIs, PostgreSQL, Kafka, Docker, Prometheus, Grafana, and CI/CD foundations.</p>
-              <a href="https://github.com/mikeywestie/ecommerce-api" target="_blank" rel="noreferrer">Open Repository →</a>
+            <article class="project-card project-card-featured">
+              <div class="project-card-topline">
+                <p class="project-label">Full-Stack Platform</p>
+                <span class="project-status-pill">Live on Render + GitHub Pages</span>
+              </div>
+
+              <h3>Event-Driven E-Commerce Platform</h3>
+
+              <p>
+                A deployed full-stack e-commerce platform built with Spring Boot, React, PostgreSQL, JWT authentication,
+                inventory controls, coupons, checkout, payment simulation, admin dashboards, and live system health monitoring.
+              </p>
+
+              <ul class="project-highlights">
+                <li>Customer storefront with product browsing, cart, coupons, and checkout.</li>
+                <li>Admin dashboard for orders, payments, inventory, product status, and health checks.</li>
+                <li>Spring Boot API with PostgreSQL, Flyway migrations, JWT security, Docker, and Kafka-ready architecture.</li>
+              </ul>
+
+              <div class="project-tech-row">
+                <span>Java 21</span>
+                <span>Spring Boot</span>
+                <span>React</span>
+                <span>PostgreSQL</span>
+                <span>JWT</span>
+                <span>Flyway</span>
+                <span>Docker</span>
+              </div>
+
+              <div class="project-actions">
+                <a class="project-action primary"
+                   href="https://mikeywestie.github.io/ecommerce-admin-ui"
+                   target="_blank"
+                   rel="noreferrer">
+                  Open Live Demo →
+                </a>
+
+                <a class="project-action"
+                   href="https://ecommerce-api-xrkk.onrender.com/swagger-ui.html"
+                   target="_blank"
+                   rel="noreferrer">
+                  Swagger API →
+                </a>
+
+                <a class="project-action"
+                   href="https://github.com/mikeywestie/ecommerce-api"
+                   target="_blank"
+                   rel="noreferrer">
+                  Backend Repo →
+                </a>
+
+                <a class="project-action"
+                   href="https://github.com/mikeywestie/ecommerce-admin-ui"
+                   target="_blank"
+                   rel="noreferrer">
+                  Frontend Repo →
+                </a>
+              </div>
             </article>
 
-            <article class="project-card">
-              <p class="project-label">Frontend Dashboard</p>
-              <h3>Ecommerce Admin UI</h3>
-              <p>React and TypeScript dashboard for operational visibility across orders, payments, inventory, and system health.</p>
-              <a href="https://github.com/mikeywestie/ecommerce-admin-ui" target="_blank" rel="noreferrer">Open Repository →</a>
-            </article>
-          </div>
+            <div class="project-grid project-grid-secondary">
+              <article class="project-card">
+                <p class="project-label">Backend Platform</p>
+                <h3>E-Commerce RESTful API</h3>
+                <p>
+                  Spring Boot backend showcasing secure APIs, PostgreSQL persistence, Flyway migrations,
+                  Kafka-ready event publishing, Docker deployment, actuator health, and business-rule validation.
+                </p>
+                <a href="https://github.com/mikeywestie/ecommerce-api" target="_blank" rel="noreferrer">Open Repository →</a>
+              </article>
+
+              <article class="project-card">
+                <p class="project-label">Frontend Dashboard</p>
+                <h3>Ecommerce Admin UI</h3>
+                <p>
+                  React and TypeScript interface for customer shopping, admin operations, orders, payments,
+                  inventory management, coupons, responsive layouts, and live system health visibility.
+                </p>
+                <a href="https://github.com/mikeywestie/ecommerce-admin-ui" target="_blank" rel="noreferrer">Open Repository →</a>
+              </article>
+            </div>
           </div>
         </section>
-
-
 
         <section class="panel latest-thoughts-panel static-panel">
           <div class="latest-thoughts-header">
