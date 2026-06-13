@@ -6,6 +6,31 @@
     <title>Contact | Michael Westman Digital Workshop</title>
     <link rel="icon" href="public/favicon.png" sizes="32x32">
     <link rel="stylesheet" href="assets/css/workshop.css">
+
+    <style>
+        .hero-main {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-main::before {
+            content: "";
+            position: absolute;
+            width: 340px;
+            height: 340px;
+            left: 120px;
+            top: 70px;
+            background: radial-gradient(circle, rgba(0, 217, 255, 0.18), transparent 65%);
+            filter: blur(12px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .hero-main > * {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
 <div class="shell">
@@ -42,7 +67,7 @@
 
             <div class="actions">
                 <a class="button primary" href="Michael-Westman-CV.pdf" download>Download CV</a>
-                <a class="button amber" href="Michael_Westman_Academic_Documents.zip" download>Academic Documents</a>
+                <a class="button amber" href="Michael_Westman_Academic_Documents.zip" download>Qualifications & Docs</a>
             </div>
         </section>
 

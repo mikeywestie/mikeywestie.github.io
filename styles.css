@@ -1766,3 +1766,55 @@ footer { display: flex; justify-content: space-between; gap: 12px; color: var(--
     min-height: auto;
   }
 }
+/* CONTACT PAGE POLISH */
+
+.grid-3 {
+    gap: 24px;
+}
+
+.mini-card {
+    padding: 2rem;
+}
+
+.mini-card p {
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.mini-card .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.mini-card .card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.mini-card .button {
+    padding: 0.75rem 1.25rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .grid-3 {
+        gap: 18px;
+    }
+
+    .mini-card {
+        padding: 1.5rem;
+    }
+
+    .mini-card .actions {
+        gap: 10px;
+    }
+
+    .mini-card .card-tags {
+        gap: 8px;
+    }
+}
