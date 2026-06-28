@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420">
-<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#22d3ee"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
-<rect width="640" height="420" rx="34" fill="#071125"/>
-<circle cx="120" cy="80" r="70" fill="#22d3ee" opacity=".12"/>
-<circle cx="520" cy="340" r="110" fill="#a855f7" opacity=".12"/>
-<rect x="95" y="115" width="450" height="190" rx="28" fill="none" stroke="url(#g)" stroke-width="6"/>
-<text x="320" y="235" text-anchor="middle" font-family="Arial" font-size="72" font-weight="800" fill="#e5faff">DB</text>
-</svg>
