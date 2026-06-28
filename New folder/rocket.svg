@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800" height="800" viewBox="0 0 800 800" role="img">
+  <title>Cartoon Rocket</title>
+
+  <defs>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#dfe7f5"/>
+    </linearGradient>
+
+    <linearGradient id="noseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7a7a"/>
+      <stop offset="100%" stop-color="#ff3b3b"/>
+    </linearGradient>
+
+    <linearGradient id="finGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5aa9ff"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+
+    <radialGradient id="windowGrad" cx="35%" cy="35%">
+      <stop offset="0%" stop-color="#8fe9ff"/>
+      <stop offset="100%" stop-color="#0f3d91"/>
+    </radialGradient>
+
+    <linearGradient id="flameGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fff7a8"/>
+      <stop offset="50%" stop-color="#ffb000"/>
+      <stop offset="100%" stop-color="#ff5a00"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#000000" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+
+  <g transform="translate(400,400) rotate(25)" filter="url(#shadow)">
+    <!-- Flame -->
+    <path d="M -35 200
+             C -80 300, -20 360, 0 420
+             C 20 360, 80 300, 35 200 Z"
+          fill="url(#flameGrad)"/>
+
+    <!-- Body -->
+    <ellipse cx="0" cy="40" rx="90" ry="200"
+             fill="url(#bodyGrad)"
+             stroke="#0f172a"
+             stroke-width="8"/>
+
+    <!-- Nose cone -->
+    <path d="M -90 -60
+             C -70 -180, 70 -180, 90 -60 Z"
+          fill="url(#noseGrad)"
+          stroke="#0f172a"
+          stroke-width="8"/>
+
+    <!-- Blue stripe -->
+    <rect x="-85" y="35" width="170" height="28" rx="14"
+          fill="#60a5fa"
+          stroke="#0f172a"
+          stroke-width="6"/>
+
+    <!-- Window -->
+    <circle cx="0" cy="-10" r="42"
+            fill="url(#windowGrad)"
+            stroke="#0f172a"
+            stroke-width="8"/>
+    <circle cx="-12" cy="-22" r="10" fill="#ffffff" opacity="0.85"/>
+
+    <!-- Left fin -->
+    <path d="M -90 90
+             C -170 110, -200 200, -150 250
+             C -120 220, -80 170, -55 120 Z"
+          fill="url(#finGrad)"
+          stroke="#0f172a"
+          stroke-width="8"/>
+
+    <!-- Right fin -->
+    <path d="M 90 90
+             C 170 110, 200 200, 150 250
+             C 120 220, 80 170, 55 120 Z"
+          fill="url(#finGrad)"
+          stroke="#0f172a"
+          stroke-width="8"/>
+
+    <!-- Booster -->
+    <rect x="-30" y="180" width="60" height="40" rx="12"
+          fill="#cbd5e1"
+          stroke="#0f172a"
+          stroke-width="6"/>
+
+    <!-- Decorative stars -->
+    <g fill="#ffffff" opacity="0.9">
+      <circle cx="-45" cy="-95" r="4"/>
+      <circle cx="52" cy="-85" r="3"/>
+      <circle cx="38" cy="90" r="3"/>
+    </g>
+  </g>
+</svg>

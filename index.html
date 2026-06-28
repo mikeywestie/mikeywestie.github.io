@@ -9,16 +9,14 @@
   <link rel="icon" href="public/favicon.png" sizes="32x32">
   <link rel="apple-touch-icon" href="public/favicon.png">
   <link rel="stylesheet" href="assets/css/workshop.css" />
-  <style>
-    .thoughts-carousel-wrap{position:relative;overflow:hidden}.thoughts-carousel{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(280px,34%);gap:16px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:inline mandatory;padding:4px 4px 16px;scrollbar-width:thin;scrollbar-color:rgba(34,211,238,.45) rgba(15,23,42,.5)}.thoughts-carousel::-webkit-scrollbar{height:8px}.thoughts-carousel::-webkit-scrollbar-track{background:rgba(15,23,42,.5);border-radius:999px}.thoughts-carousel::-webkit-scrollbar-thumb{background:linear-gradient(90deg,var(--cyan),var(--amber));border-radius:999px}.thought-slide{min-height:220px;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;gap:16px;position:relative;overflow:hidden;border-color:rgba(34,211,238,.22)}.thought-slide::before{content:"";position:absolute;inset:-1px;background:radial-gradient(circle at 12% 10%,rgba(34,211,238,.12),transparent 34%),radial-gradient(circle at 90% 15%,rgba(245,158,11,.10),transparent 32%);pointer-events:none}.thought-slide>*{position:relative;z-index:1}.thought-meta{display:flex;justify-content:space-between;align-items:center;gap:12px;color:var(--muted);font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.09em}.thought-slide h3{margin:0;color:var(--text);font-size:1.25rem;line-height:1.2}.thought-slide p{margin:10px 0 0}.thought-slide-link{width:fit-content;color:#bae6fd;font-weight:900}.thoughts-hint{margin-top:8px;color:var(--muted);font-size:.9rem}@media(max-width:980px){.thoughts-carousel{grid-auto-columns:minmax(270px,76%)}}@media(max-width:640px){.thoughts-carousel{grid-auto-columns:minmax(260px,88%)}}
-  </style>
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <div class="shell">
   <header class="topbar">
-    <a class="brand" href="index.html" aria-label="Michael Westman Digital Workshop Home"><strong>Michael Westman</strong><span>Digital Workshop</span></a>
+    <a class="brand" href="index.html" aria-label="Michael Westman Digital Workshop Home"><strong>Michael Westman</strong><span>Full-Stack Java · Digital Workshop</span></a>
     <nav class="nav" aria-label="Workshop navigation">
-      <a href="index.html">Home</a>
+      <a href="index.html" aria-current="page" class="active">Home</a>
       <a href="workshop-projects.html">Projects</a>
       <a href="workshop-career.html">Career</a>
       <a href="workshop-creative.html">Creative</a>
@@ -26,7 +24,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="main">
     <section class="hero-grid" aria-label="Digital Workshop introduction">
       <aside class="profile-card">
         <div class="profile-frame"><img src="profile.jpg" alt="Michael Westman" /></div>
@@ -50,6 +48,8 @@
 
     <section class="section" id="journey"><div class="section-header"><div><p class="section-kicker">Engineering Journey</p><h2>From Operations To Enterprise Java</h2><p>A compact preview of the career story. The full recruiter-focused career page has the detail.</p></div><a class="button" href="workshop-career.html">Open Career Page</a></div><div class="journey"><div class="journey-step"><strong>Tiauto</strong><span>Technical foundation</span></div><div class="journey-step"><strong>MHA</strong><span>Legacy desktop dev → web dev role</span></div><div class="journey-step"><strong>Cash Connect</strong><span>Support & development</span></div><div class="journey-step"><strong>BMW</strong><span>Enterprise systems</span></div><div class="journey-step"><strong>PPS</strong><span>Secure Java APIs</span></div><div class="journey-step"><strong>Stanchion</strong><span>Payment systems</span></div><div class="journey-step"><strong>N&S</strong><span>Automation consulting</span></div></div></section>
 
+    <section class="section" id="recognition"><div class="section-header"><div><p class="section-kicker">Recognition</p><h2>HackerRank Orchestrate — June 2026</h2><p>Built and deployed an AI agent in HackerRank’s Orchestrate hackathon series.</p></div><span class="live-badge"><span class="dot" aria-hidden="true"></span> Verified</span></div><article class="cert-card"><a class="cert-link" href="public/images/orchestrate-certificate.gif" target="_blank" rel="noopener noreferrer" aria-label="Open full HackerRank Orchestrate certificate"><img class="cert-img" src="public/images/orchestrate-certificate.gif" alt="HackerRank Orchestrate June 2026 certificate — Mikey Westman, final rank 991 of 1,773"></a><div class="cert-body"><p class="section-kicker">AI Agent Hackathon</p><h3>Finished #991 of 1,773 who completed the challenge</h3><p class="cert-meta">Around 5,500 developers registered for the June 2026 edition; 1,773 saw it through by building and deploying a working AI agent. Finishing put my result ahead of the majority who signed up but never shipped.</p><div class="actions"><a class="button" href="public/images/orchestrate-certificate.gif" target="_blank" rel="noopener noreferrer">View full certificate</a></div></div></article></section>
+
     <section class="section" id="projects"><div class="section-header"><div><p class="section-kicker">Projects On The Bench</p><h2>Builds Worth Exploring</h2><p>Future project pages can expand each one into screenshots, architecture notes, and lessons learned.</p></div><a class="button" href="workshop-projects.html">Open Projects Page</a></div><div class="grid-2"><article class="mini-card"><h3>E-Commerce Platform</h3><p>A production-style Java and React platform demonstrating secure APIs, full-stack delivery, and operational visibility.</p><div class="card-tags"><span>Spring Boot</span><span>React</span><span>PostgreSQL</span></div></article><article class="mini-card"><h3>OCR & Document Processing</h3><p>Converting quote request emails, images, and documents into structured information for faster business workflows.</p><div class="card-tags"><span>Java</span><span>OCR</span><span>Automation</span></div></article><article class="mini-card"><h3>N&S Automation</h3><p>Practical tools designed to reduce administration overhead and turn repetitive business tasks into guided workflows.</p><div class="card-tags"><span>Consulting</span><span>AI</span><span>Workflow</span></div></article><article class="mini-card"><h3>Portfolio Analytics</h3><p>A private dashboard concept for understanding portfolio engagement, clicks, and visitor interest.</p><div class="card-tags"><span>Analytics</span><span>Dashboard</span><span>Insights</span></div></article></div></section>
 
     <section class="section"><div class="section-header"><div><p class="section-kicker">Beyond The Keyboard</p><h2>The Human Side</h2><p>The part that makes the portfolio feel like Michael, not just another CV online.</p></div><a class="button" href="workshop-creative.html">Open Creative Page</a></div><div class="grid-4"><article class="note-card"><h3>Piano</h3><p>Music, practice, and creative expression away from the IDE.</p></article><article class="note-card"><h3>Nature Documentaries</h3><p>AI-assisted wildlife storytelling and educational video experiments.</p></article><article class="note-card"><h3>Helping Paws</h3><p>Community involvement supporting animal welfare initiatives.</p></article><article class="note-card"><h3>AI Experiments</h3><p>Exploring how AI can support productivity, automation, and creativity.</p></article></div></section>
@@ -61,5 +61,6 @@
 
   <footer class="panel footer" id="contact"><p class="section-kicker">Let’s Build Something Together</p><h2>Looking for a Java developer who actually enjoys building?</h2><p>Whether you are hiring, discussing a project, or just want to connect, I would love to hear from you.</p><div class="social-row"><a class="icon-link" href="workshop-contact.html">Contact Page</a><a class="icon-link" href="https://linkedin.com/in/michael-westman-219178188" target="_blank" rel="noreferrer">LinkedIn</a><a class="icon-link" href="https://github.com/mikeywestie" target="_blank" rel="noreferrer">GitHub</a><a class="icon-link" href="mailto:michaelwestman43@yahoo.com">Email</a><a class="icon-link" href="https://wa.me/27625315897?text=Hi%20Michael,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer">WhatsApp</a><a class="icon-link" href="Michael-Westman-CV.pdf" download>CV</a></div></footer>
 </div>
+<script defer src="assets/js/animations.js"></script>
 </body>
 </html>
