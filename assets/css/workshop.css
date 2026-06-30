@@ -306,7 +306,7 @@ h1 span {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin-top: 22px;
+  margin-top: 18px;
 }
 
 .button.primary {
@@ -768,8 +768,34 @@ h1 span {
   border-color: rgba(34, 211, 238, .55);
 }
 
-/* Consistent spacing around action rows, and a clear gap to adjacent tags
-   (fixes buttons crowding the tags in cards like "Helping Paws" and Contact). */
-.actions { margin-top: 18px; }
+/* Consistent spacing: clear gap when actions and tags are adjacent. */
 .actions + .card-tags,
 .card-tags + .actions { margin-top: 14px; }
+
+/* Intro video embedded inside a workbench-card. */
+.workbench-video {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(34, 211, 238, .15);
+  background: #000;
+  display: block;
+}
+
+/* Contact page: cyan glow behind the hero panel. */
+.contact-hero-glow {
+  position: relative;
+  overflow: hidden;
+}
+.contact-hero-glow::before {
+  content: "";
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 120px;
+  top: 70px;
+  background: radial-gradient(circle, rgba(0, 217, 255, .18), transparent 65%);
+  filter: blur(12px);
+  pointer-events: none;
+  z-index: 0;
+}
+.contact-hero-glow > * { position: relative; z-index: 1; }
