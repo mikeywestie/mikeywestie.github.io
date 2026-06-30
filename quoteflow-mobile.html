@@ -4,9 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>QuoteFlow Mobile</title>
+    <meta name="description" content="QuoteFlow Mobile — native Android quotation management app built with Kotlin and Jetpack Compose by Michael Westman." />
+    <title>QuoteFlow Mobile | Michael Westman Digital Workshop</title>
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mikeywestie.github.io/quoteflow-mobile.html" />
+    <meta property="og:title" content="QuoteFlow Mobile | Michael Westman Digital Workshop" />
+    <meta property="og:description" content="Native Android quotation management app built with Kotlin and Jetpack Compose. Signed APK available on GitHub Releases." />
+    <meta property="og:image" content="https://mikeywestie.github.io/profile.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="QuoteFlow Mobile | Michael Westman Digital Workshop" />
+    <meta name="twitter:description" content="Native Android quotation management app built with Kotlin and Jetpack Compose. Signed APK available on GitHub Releases." />
+    <meta name="twitter:image" content="https://mikeywestie.github.io/profile.jpg" />
+    <link rel="icon" href="public/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="public/favicon.png">
 
-    
     <style>
         :root {
           --bg: #080b1f;
@@ -31,6 +43,54 @@
           min-height: 100vh;
           padding: 40px 18px;
         }
+
+        /* Skip-to-content link */
+        .skip-link {
+          position: absolute;
+          left: 14px;
+          top: -64px;
+          z-index: 200;
+          padding: 10px 16px;
+          border-radius: 12px;
+          background: rgba(15, 23, 42, 0.96);
+          border: 1px solid #22d3ee;
+          color: #f8fafc;
+          font-weight: 700;
+          text-decoration: none;
+          transition: top .2s ease;
+        }
+        .skip-link:focus { top: 14px; }
+
+        /* Minimal nav back to the workshop */
+        .back-nav {
+          position: sticky;
+          top: 0;
+          z-index: 60;
+          padding: 12px 18px;
+          background: rgba(8, 11, 31, 0.92);
+          backdrop-filter: blur(14px);
+          border-bottom: 1px solid rgba(255,255,255,0.08);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          /* Pull outside the body's padding so the bar runs edge-to-edge */
+          margin: -40px -18px 32px;
+        }
+        .back-nav a {
+          text-decoration: none;
+          font-weight: 700;
+          font-size: .82rem;
+          transition: color .2s;
+        }
+        .back-nav .brand-link {
+          color: #22d3ee;
+          letter-spacing: .12em;
+          text-transform: uppercase;
+        }
+        .back-nav .brand-link:hover { color: #a5f3fc; }
+        .back-nav .projects-link { color: #cbd5e1; }
+        .back-nav .projects-link:hover { color: #f8fafc; }
 
         .wrap {
           max-width: 1080px;
@@ -236,15 +296,20 @@
           }
         }
     </style>
-    
 
 </head>
 
 <body>
 
-<div class="wrap">
+<a class="skip-link" href="#main">Skip to content</a>
 
-    
+<nav class="back-nav" aria-label="Workshop navigation">
+  <a class="brand-link" href="index.html" aria-label="Back to Michael Westman Digital Workshop">← Michael Westman</a>
+  <a class="projects-link" href="workshop-projects.html">All Projects</a>
+</nav>
+
+<div class="wrap" id="main">
+
     <div class="badge">
         ✅ Signed Android Release • GitHub Release v1.0.0
     </div>
@@ -264,12 +329,16 @@
             <div class="actions">
 
                 <a class="btn btn-primary"
-                   href="https://github.com/mikeywestie/quoteflow-mobile/releases/download/v1.0.0/app-release.apk">
+                   href="https://github.com/mikeywestie/quoteflow-mobile/releases/download/v1.0.0/app-release.apk"
+                   target="_blank"
+                   rel="noreferrer">
                     Download Signed APK
                 </a>
 
                 <a class="btn btn-secondary"
-                   href="https://github.com/mikeywestie/quoteflow-mobile">
+                   href="https://github.com/mikeywestie/quoteflow-mobile"
+                   target="_blank"
+                   rel="noreferrer">
                     View Source Code
                 </a>
 
@@ -376,17 +445,21 @@
         <div class="actions" style="margin-top:20px;">
 
             <a class="btn btn-primary"
-               href="https://github.com/mikeywestie/quoteflow-mobile/releases/download/v1.0.0/app-release.apk">
+               href="https://github.com/mikeywestie/quoteflow-mobile/releases/download/v1.0.0/app-release.apk"
+               target="_blank"
+               rel="noreferrer">
                 Download APK
             </a>
 
             <a class="btn btn-secondary"
-               href="https://github.com/mikeywestie/quoteflow-mobile/releases/tag/v1.0.0">
+               href="https://github.com/mikeywestie/quoteflow-mobile/releases/tag/v1.0.0"
+               target="_blank"
+               rel="noreferrer">
                 View Release Notes
             </a>
 
             <a class="btn btn-secondary"
-               href="https://mikeywestie.github.io/quoteflow-privacy.html">
+               href="quoteflow-privacy.html">
                 Privacy Policy
             </a>
 
