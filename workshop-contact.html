@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#07111f">
     <link rel="canonical" href="https://mikeywestie.github.io/workshop-contact.html" />
     <meta name="description" content="Get in touch with Michael Westman — Java Developer available immediately for permanent, contract, remote, and hybrid backend and full-stack opportunities." />
     <title>Contact | Michael Westman Digital Workshop</title>
@@ -29,6 +30,7 @@
             <strong>Michael Westman</strong>
             <span>Full-Stack Java · Digital Workshop</span>
         </a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
 
         <nav class="nav" aria-label="Workshop navigation">
             <a href="index.html">Home</a>
@@ -71,13 +73,54 @@
         </section>
 
         <section class="section">
+            <div class="section-header"><div><p class="section-kicker">Send a Message</p><h2>Write me directly.</h2><p>Fill in the form and it will open your email client with everything pre-filled. Hit send and I will reply promptly.</p></div></div>
+            <form class="contact-form" id="contactForm" novalidate>
+                <div class="form-row" style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+                    <div class="form-group">
+                        <label for="cName">Your Name</label>
+                        <input id="cName" type="text" placeholder="Jane Smith" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cEmail">Your Email</label>
+                        <input id="cEmail" type="email" placeholder="jane@company.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="cSubject">Subject</label>
+                    <input id="cSubject" type="text" placeholder="Java Developer role at Acme Corp">
+                </div>
+                <div class="form-group">
+                    <label for="cMessage">Message</label>
+                    <textarea id="cMessage" rows="5" placeholder="Hi Michael, I found your portfolio and would like to discuss..."></textarea>
+                </div>
+                <div class="actions">
+                    <button class="button primary" type="submit">Open in Email Client</button>
+                    <a class="button" href="mailto:michaelwestman43@yahoo.com">Email Directly</a>
+                </div>
+            </form>
+        </section>
+
+        <section class="section">
             <article class="workbench-card">
                 <div><p class="section-kicker">Current Status</p><h2>Open to the right opportunity.</h2><p>I am currently available immediately and interested in Java, Spring Boot, backend engineering, integration, and full-stack opportunities.</p><div class="card-tags"><span>Permanent</span><span>Contract</span><span>Remote</span><span>Hybrid</span></div></div>
                 <div class="workbench-visual"><div class="status-pill"><span>Availability</span><span class="dot" aria-hidden="true"></span></div><div class="monitor-line"><span style="--w:100%"></span></div><div class="status-pill"><span>Interview Ready</span><span>Yes</span></div><div class="monitor-line"><span style="--w:95%"></span></div></div>
             </article>
         </section>
     </main>
+  <footer class="panel footer">
+    <p class="section-kicker">Let's Build Something Together</p>
+    <h2>Looking for a Java developer who actually enjoys building?</h2>
+    <p>Whether you are hiring, discussing a project, or just want to connect, I would love to hear from you.</p>
+    <div class="social-row">
+      <a class="icon-link" href="https://linkedin.com/in/michael-westman-219178188" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="icon-link" href="https://github.com/mikeywestie" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="icon-link" href="mailto:michaelwestman43@yahoo.com">Email</a>
+      <a class="icon-link" href="https://wa.me/27625315897?text=Hi%20Michael,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer">WhatsApp</a>
+      <a class="icon-link" href="Michael-Westman-CV.pdf" download>CV</a>
+    </div>
+  </footer>
 </div>
+<button class="btn-top" id="btnTop" aria-label="Back to top">↑</button>
 <script defer src="assets/js/animations.js"></script>
 </body>
 </html>

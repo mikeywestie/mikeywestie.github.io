@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta name="theme-color" content="#07111f">
     <link rel="canonical" href="https://mikeywestie.github.io/quoteflow-mobile.html" />
     <meta name="description" content="QuoteFlow Mobile — native Android quotation management app built with Kotlin and Jetpack Compose by Michael Westman." />
     <title>QuoteFlow Mobile | Michael Westman Digital Workshop</title>
@@ -20,6 +21,7 @@
     <meta name="twitter:image" content="https://mikeywestie.github.io/profile.jpg" />
     <link rel="icon" href="public/favicon.png" sizes="32x32">
     <link rel="apple-touch-icon" href="public/favicon.png">
+    <link rel="stylesheet" href="assets/css/workshop.css">
 
     <style>
         :root {
@@ -43,60 +45,12 @@
             linear-gradient(135deg, #080b1f 0%, #111827 55%, #030712 100%);
           color: var(--text);
           min-height: 100vh;
-          padding: 40px 18px;
+          padding: 0;
         }
-
-        /* Skip-to-content link */
-        .skip-link {
-          position: absolute;
-          left: 14px;
-          top: -64px;
-          z-index: 200;
-          padding: 10px 16px;
-          border-radius: 12px;
-          background: rgba(15, 23, 42, 0.96);
-          border: 1px solid #22d3ee;
-          color: #f8fafc;
-          font-weight: 700;
-          text-decoration: none;
-          transition: top .2s ease;
-        }
-        .skip-link:focus { top: 14px; }
-
-        /* Minimal nav back to the workshop */
-        .back-nav {
-          position: sticky;
-          top: 0;
-          z-index: 60;
-          padding: 12px 18px;
-          background: rgba(8, 11, 31, 0.92);
-          backdrop-filter: blur(14px);
-          border-bottom: 1px solid rgba(255,255,255,0.08);
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 12px;
-          /* Pull outside the body's padding so the bar runs edge-to-edge */
-          margin: -40px -18px 32px;
-        }
-        .back-nav a {
-          text-decoration: none;
-          font-weight: 700;
-          font-size: .82rem;
-          transition: color .2s;
-        }
-        .back-nav .brand-link {
-          color: #22d3ee;
-          letter-spacing: .12em;
-          text-transform: uppercase;
-        }
-        .back-nav .brand-link:hover { color: #a5f3fc; }
-        .back-nav .projects-link { color: #cbd5e1; }
-        .back-nav .projects-link:hover { color: #f8fafc; }
 
         .wrap {
           max-width: 1080px;
-          margin: 0 auto;
+          margin: 40px auto 60px;
         }
 
         .badge {
@@ -304,12 +258,18 @@
 <body>
 
 <a class="skip-link" href="#main">Skip to content</a>
-
-<nav class="back-nav" aria-label="Workshop navigation">
-  <a class="brand-link" href="index.html" aria-label="Back to Michael Westman Digital Workshop">← Michael Westman</a>
-  <a class="projects-link" href="workshop-projects.html">All Projects</a>
-</nav>
-
+<div class="shell">
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Michael Westman Digital Workshop home"><strong>Michael Westman</strong><span>Full-Stack Java · Digital Workshop</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav" aria-label="Workshop navigation">
+      <a href="index.html">Home</a>
+      <a href="workshop-projects.html" aria-current="page" class="active">Projects</a>
+      <a href="workshop-career.html">Career</a>
+      <a href="workshop-creative.html">Creative</a>
+      <a href="workshop-contact.html">Contact</a>
+    </nav>
+  </header>
 <div class="wrap" id="main">
 
     <div class="badge">
@@ -469,7 +429,22 @@
 
     </section>
 
-</div>
-
+</div><!-- /.wrap -->
+  <footer class="panel footer">
+    <p class="section-kicker">Let's Build Something Together</p>
+    <h2>Looking for a Java developer who actually enjoys building?</h2>
+    <p>Whether you are hiring, discussing a project, or just want to connect, I would love to hear from you.</p>
+    <div class="social-row">
+      <a class="icon-link" href="workshop-contact.html">Contact Page</a>
+      <a class="icon-link" href="https://linkedin.com/in/michael-westman-219178188" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a class="icon-link" href="https://github.com/mikeywestie" target="_blank" rel="noreferrer">GitHub</a>
+      <a class="icon-link" href="mailto:michaelwestman43@yahoo.com">Email</a>
+      <a class="icon-link" href="https://wa.me/27625315897?text=Hi%20Michael,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noreferrer">WhatsApp</a>
+      <a class="icon-link" href="Michael-Westman-CV.pdf" download>CV</a>
+    </div>
+  </footer>
+</div><!-- /.shell -->
+<button class="btn-top" id="btnTop" aria-label="Back to top">↑</button>
+<script defer src="assets/js/animations.js"></script>
 </body>
 </html>

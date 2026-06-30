@@ -50,3 +50,84 @@
     observer.observe(el);
   });
 })();
+
+/* ---------------------------------------------------------------------------
+   Hamburger / mobile nav toggle
+   --------------------------------------------------------------------------- */
+(function () {
+  var toggle = document.getElementById("navToggle");
+  var nav = document.querySelector(".nav");
+  if (!toggle || !nav) return;
+
+  function close() {
+    nav.classList.remove("is-open");
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open navigation");
+  }
+
+  toggle.addEventListener("click", function () {
+    var opening = !nav.classList.contains("is-open");
+    nav.classList.toggle("is-open");
+    toggle.setAttribute("aria-expanded", opening ? "true" : "false");
+    toggle.setAttribute("aria-label", opening ? "Close navigation" : "Open navigation");
+  });
+
+  nav.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") close();
+  });
+
+  document.addEventListener("click", function (e) {
+    if (!toggle.contains(e.target) && !nav.contains(e.target)) close();
+  });
+})();
+
+/* ---------------------------------------------------------------------------
+   Thoughts carousel — prev / next arrow buttons
+   --------------------------------------------------------------------------- */
+(function () {
+  var carousels = document.querySelectorAll(".thoughts-carousel");
+  carousels.forEach(function (carousel) {
+    var wrap = carousel.closest(".thoughts-carousel-wrap");
+    if (!wrap) return;
+    var prev = wrap.querySelector(".carousel-prev");
+    var next = wrap.querySelector(".carousel-next");
+    function scrollAmt() {
+      var slide = carousel.querySelector(".thought-slide");
+      return slide ? slide.offsetWidth + 16 : 300;
+    }
+    if (prev) prev.addEventListener("click", function () { carousel.scrollBy({ left: -scrollAmt(), behavior: "smooth" }); });
+    if (next) next.addEventListener("click", function () { carousel.scrollBy({ left: scrollAmt(), behavior: "smooth" }); });
+  });
+})();
+
+/* ---------------------------------------------------------------------------
+   Back-to-top button
+   --------------------------------------------------------------------------- */
+(function () {
+  var btn = document.getElementById("btnTop");
+  if (!btn) return;
+  window.addEventListener("scroll", function () {
+    btn.classList.toggle("visible", window.scrollY > 400);
+  }, { passive: true });
+  btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+/* Contact form — mailto bridge */
+  var form = document.getElementById("contactForm");
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var name = (document.getElementById("cName") || {}).value || "";
+      var email = (document.getElementById("cEmail") || {}).value || "";
+      var subject = (document.getElementById("cSubject") || {}).value || "Portfolio Contact";
+      var message = (document.getElementById("cMessage") || {}).value || "";
+      var body = "Name: " + name + "\nEmail: " + email + "\n\n" + message;
+      window.location.href =
+        "mailto:michaelwestman43@yahoo.com?subject=" +
+        encodeURIComponent(subject) +
+        "&body=" +
+        encodeURIComponent(body);
+    });
+  }
+})();
